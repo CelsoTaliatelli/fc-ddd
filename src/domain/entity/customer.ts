@@ -1,6 +1,6 @@
 import Address from "./address";
 
-class Customer {
+export default class Customer {
     private _id!: string;
     private _name!: string;
     private _address!: Address;
@@ -15,7 +15,7 @@ class Customer {
         return this._name
     }
 
-    active(){
+    activate(){
         this._active = true;
     }
 
