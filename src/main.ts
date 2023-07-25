@@ -10,9 +10,7 @@ customer.activate();
 
 const item1 = new OrderItem("1","Item",25);
 const item2 = new OrderItem("1","Item",45);
-let items:OrderItem[] = [];
-items.push(item1);
-items.push(item2)
 
 
-const order = new Order("1","123",items);
+const order = new Order("1","123",[item1,item2]);
+console.log(order);
