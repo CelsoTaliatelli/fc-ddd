@@ -15,4 +15,12 @@ export default class Product {
             throw new Error("Id is required");
         }
     }
+
+    changePrice(price:number) {
+        this._price = price;
+    }
+
+    get price(): number {
+        return this._price
+    }
 }
