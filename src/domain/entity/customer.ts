@@ -10,6 +10,7 @@ export default class Customer {
     constructor(id:string, name: string){
         this._name = name;
         this._id = id;
+        this._active = false;
         this.validate();
     }
 
@@ -59,5 +60,13 @@ export default class Customer {
 
     set Address(address: Address){
         this._address = address;
+    }
+
+    changeAddress(address: Address) {
+        this._address = address;
+    }
+
+    get Address(): Address {
+        return this._address;
     }
 }
