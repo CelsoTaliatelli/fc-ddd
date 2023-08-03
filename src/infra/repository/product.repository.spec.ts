@@ -10,11 +10,11 @@ describe("Product repository test", () => {
     beforeEach(async () => {
         sequelize = new Sequelize({
             dialect: 'sqlite',
-            storage:':memory',
+            storage:':memory:',
             logging: false,
             sync: {force: true}
         })
-        sequelize.addModels([ProductModel])
+        await sequelize.addModels([ProductModel])
         await sequelize.sync();
     });
 
