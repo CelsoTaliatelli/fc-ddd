@@ -6,7 +6,7 @@ import EventDispatcher from "./event.dispatcher";
 import EnviaConsoleWhenCustomerIsCreatedHandler from "../../customer/event/handler/envia-console-when-customer-is-created.handler";
 import EnviaConsole2WhenCustomerIsCreatedHandler from "../../customer/event/handler/envia-console2-when-customer-is-created.handler";
 import EnviaConsoleWhenCustomerChangeAddressHandler from "../../customer/event/handler/envia-console-when-customer-change-address.handler";
-import CustomerChangeAddressEvent from "../../customer/event/handler/customer-change-address.event";
+import CustomerChangeAddressEvent from "../../customer/event/customer-change-address.event";
 import Customer from "../../customer/entity/customer";
 
 describe("Domain event tests", () => {
