@@ -1,13 +1,13 @@
-import Address from "../../entity/address";
-import Customer from "../../entity/customer";
-import SendEmailWhenProductIsCreatedHandler from "../product/handler/send-email-when-product-is-created.handler";
-import ProductCreatedEvent from "../product/product-created.event";
-import CustomerCreatedEvent from "./customer/customer-created.event";
-import CustomerChangeAddressEvent from "./customer/handler/customer-change-address.event";
-import EnviaConsoleWhenCustomerChangeAddressHandler from "./customer/handler/envia-console-when-customer-change-address.handler";
-import EnviaConsoleWhenCustomerIsCreatedHandler from "./customer/handler/envia-console-when-customer-is-created.handler";
-import EnviaConsole2WhenCustomerIsCreatedHandler from "./customer/handler/envia-console2-when-customer-is-created.handler copy";
+import Address from "../../customer/value-object/address";
+import SendEmailWhenProductIsCreatedHandler from "../../product/event/handler/send-email-when-product-is-created.handler";
+import ProductCreatedEvent from "../../product/event/product-created.event";
+import CustomerCreatedEvent from "../../customer/event/customer-created.event";
 import EventDispatcher from "./event.dispatcher";
+import EnviaConsoleWhenCustomerIsCreatedHandler from "../../customer/event/handler/envia-console-when-customer-is-created.handler";
+import EnviaConsole2WhenCustomerIsCreatedHandler from "../../customer/event/handler/envia-console2-when-customer-is-created.handler";
+import EnviaConsoleWhenCustomerChangeAddressHandler from "../../customer/event/handler/envia-console-when-customer-change-address.handler";
+import CustomerChangeAddressEvent from "../../customer/event/handler/customer-change-address.event";
+import Customer from "../../customer/entity/customer";
 
 describe("Domain event tests", () => {
     it("Should register an event handler", () => {

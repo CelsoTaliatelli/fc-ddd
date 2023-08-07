@@ -5,13 +5,13 @@ import OrderModel from "../db/sequelize/model/order.model";
 import OrderItemModel from "../db/sequelize/model/order-item.model";
 import ProductModel from "../db/sequelize/model/product.model";
 import CustomerRepository from "./customer.repository";
-import Customer from "../../domain/entity/customer";
-import Address from "../../domain/entity/address";
+import Address from "../../domain/customer/value-object/address";
 import ProductRepository from "./product.repository";
-import Product from "../../domain/entity/product";
-import OrderItem from "../../domain/entity/order_item";
-import Order from "../../domain/entity/order";
-import { OrderStatus } from "../../domain/entity/order-status.enum";
+import Product from "../../domain/product/entity/product";
+import { OrderStatus } from "../../domain/checkout/value-object/order-status.enum";
+import Customer from "../../domain/customer/entity/customer";
+import OrderItem from "../../domain/checkout/entity/order_item";
+import Order from "../../domain/checkout/entity/order";
 
 describe("Order repository test", () => {
     let sequelize: Sequelize;
@@ -199,7 +199,7 @@ describe("Order repository test", () => {
             customer_id: foundOrder.customerId,
             total: foundOrder.total(),
             status: foundOrder.status,
-            items: foundOrder.items.map((orderItem) => {
+            items: foundOrder.items.map((orderItem:OrderItem) => {
                 return {
                     "id": orderItem.id,
                     "name": orderItem.name,

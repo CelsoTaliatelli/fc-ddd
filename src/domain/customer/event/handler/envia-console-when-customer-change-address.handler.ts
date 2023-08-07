@@ -1,5 +1,5 @@
-import EventHandlerInterface from "../../event-handler.interface";
-import EventInterface from "../../event.interface";
+
+import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
 import CustomerCreatedEvent from "../customer-created.event";
 import CustomerChangeAddressEvent from "./customer-change-address.event";
 

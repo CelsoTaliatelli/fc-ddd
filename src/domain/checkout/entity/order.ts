@@ -1,4 +1,5 @@
-import { OrderStatus } from "./order-status.enum";
+
+import { OrderStatus } from "../value-object/order-status.enum";
 import OrderItem from "./order_item";
 
 export default class Order {
