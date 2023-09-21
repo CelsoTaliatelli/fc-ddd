@@ -15,6 +15,9 @@ export default class Product implements ProductInterface{
     validate(){
         if(this._id === ""){
             throw new Error("Id is required");
+        };
+        if(this._name === ""){
+            throw new Error("name is required")
         }
     }
 
