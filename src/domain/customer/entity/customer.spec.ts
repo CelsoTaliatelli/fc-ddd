@@ -7,7 +7,7 @@ describe("Customer unit tests", () => {
         
         expect(() => {
             let customer = new Customer("","John");
-        }).toThrowError("Id is required");
+        }).toThrowError("customer: Id is required");
     });
 
     it('Should add reward points', () => {
@@ -25,7 +25,7 @@ describe("Customer unit tests", () => {
         
         expect(() => {
             let customer = new Customer("1","");
-        }).toThrowError("name is required");
+        }).toThrowError("customer: name is required");
     });
 
     it('should change name', () =>{
